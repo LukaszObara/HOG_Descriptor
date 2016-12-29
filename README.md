@@ -1,2 +1,2 @@
 # HOG_Descriptor
-Code of Histogram of Oriented Gradients
+Code for Histogram of Oriented Gradients
