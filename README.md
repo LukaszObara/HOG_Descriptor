@@ -2,18 +2,14 @@
 For educational purposes we build a people detector as described in Navneet Dalal and Bill Triggs paper entitled <em>Histograms of Oriented Gradients for Human Detection</em>. We will be using the 160x96 pixel images found in <a href="http://pascal.inrialpes.fr/data/human/"> INRIA Person Dataset</a> to test our implementation. In addition we have provided a script to accomplish the same task using `OpenCV`. 
 
 The method that we follow can be represented by the following diagram:
-![Alt text](https://github.com/LukaszObara/HOG_Descriptor/blob/master/images/HOG_Steps.png "HOG steps").
+![](https://github.com/LukaszObara/HOG_Descriptor/blob/master/images/HOG_Steps.png "HOG steps").
 
 We describe the process further in the jupyter notebook. 
 
 ### OpenCV
 Using the `OpenCV`:
-<table>
-  <tr>
-    <th>![Alt text](https://github.com/LukaszObara/HOG_Descriptor/blob/master/images/People.png "Original")</th>
-    <th>![Alt text](https://github.com/LukaszObara/HOG_Descriptor/blob/master/images/people_detect.png "Detection")</th> 
-  </tr>
- </table>
+
+![](https://github.com/LukaszObara/HOG_Descriptor/blob/master/images/People.png "Original")  ![](https://github.com/LukaszObara/HOG_Descriptor/blob/master/images/people_detect.png "Detection")
 
 # References
 <ol>
