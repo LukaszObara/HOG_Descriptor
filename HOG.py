@@ -297,11 +297,12 @@ def sliding_window(image, window_size, step_size):
 					
 					yield (x, y, img)
 
+
 def main():
-	loc_p = 'C:\\...\\Train\\pos\\'
-	loc_n = 'C:\\...\\Train\\neg\\'
-	loc_s = 'C:\\...\\Train\\data.npy'
-	loc_c = 'C:\\...\\Train\\coef.npy'
+	loc_p = 'C:\\...\\INRIA\\96X160H96\\Train\\pos\\'
+	loc_n = 'C:\\...\\INRIA\\96X160H96\\Train\\neg\\'
+	loc_s = 'C:\\...\\INRIA\\96X160H96\\Train\\data.npy'
+	loc_c = 'C:\\...\\INRIA\\96X160H96\\Train\\coef.npy'
 
 	p_files = os.listdir(loc_p)
 	n_files = os.listdir(loc_n) 
@@ -331,14 +332,20 @@ def main():
 		
 	np.save(loc_s, data)
 
-	# training SVC
+	# training the SVC
 	data = np.load(loc_s)
 	hog_svm(data, save=True)
-  
+
+	# weights = np.load(loc_c)
+	# test_file = loc_n + str(n_files[0])
+	# img = ndimage.imread(test_file, mode='L')
+	# im = hog(img)
+	# print(np.dot(im, weights.ravel()))
+
 	loc_t = 'C:\\...\\Train\\crop_000608.png'
 	img = ndimage.imread(loc_t, mode='L')
 
-	save_loc = "C:\\...\\Train\\model.pkl"
+	save_loc = "C:\\...\\INRIA\\96X160H96\\Train\\model.pkl"
 	clf = joblib.load(save_loc) 
 
 	# sl_window = sliding_window(img, window_size=(96, 160), step_size=8)
@@ -348,6 +355,13 @@ def main():
 	# 	hog_im = hog_im.reshape(1, -1)
 	# 	predict = clf.predict(hog_im)
 	# 	print(predict)
+
+	# tmp = img[:160, :96]
+	# print(tmp.shape)
+	# hog_im = hog(tmp)
+	# print(np.dot(hog_im, weights.ravel()))
+	# img_plot = plt.imshow(tmp[-1], cmap='gray')
+	# plt.show()
 
 if __name__ == "__main__":
 	main()
