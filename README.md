@@ -4,7 +4,7 @@ For educational purposes we build a people detector as described in Navneet Dala
 The method that we follow can be represented by the following diagram:
 ![](https://github.com/LukaszObara/HOG_Descriptor/blob/master/images/HOG_Steps.png "HOG steps").
 
-We describe the process further in the jupyter notebook. 
+We describe the process further in the <a href="https://github.com/LukaszObara/HOG_Descriptor/blob/master/HOG_Notebook.ipynb"> jupyter notebook. 
 
 ### OpenCV
 Using the `OpenCV`:
